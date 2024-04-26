@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+
+:root {
+    --bg-color: #19181d;
+    --calculator-color: #392f5a;
+    --display-color: #4ecdc4;
+
+    --numberBtn-color: hsl(39, 100%, 83%);
+    --numberBtn-hover-color: hsl(34, 65%, 73%);
+    --numberBtn-active-color: hsl(29, 50%, 64%);
+    --numberBtn-text-color: #000000;
+
+    --operationBtn-color: hsl(122, 44%, 68%);
+    --operationBtn-hover-color: hsl(127, 32%, 53%);
+    --operationBtn-active-color: hsl(132, 25%, 42%);
+    --operationBtn-text-color: #000000;
+
+    --equalsBtn-color: hsl(355, 78%, 56%);
+    --equalsBtn-hover-color: hsl(350, 65%, 46%);
+    --equalsBtn-active-color: hsl(345, 55%, 40%);
+    --equalsBtn-text-color: #eeeeee;
+}
+
+* {
+    font-family: "Geologica", monospace;
+}
+
+body {
+    background-color: var(--bg-color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #eee;
+}
+
+#calculator {
+    background-color: var(--calculator-color);
+    padding: 25px 40px 40px 40px;
+    border: none;
+    border-radius: 30px;
+
+    box-shadow: 0 5px 3px 5px #00000050;
+}
+
+#preview {
+    text-align: end;
+    margin-bottom: 10px;
+    width: inherit;
+    width: 230px;
+    height: 15px;
+
+    color: #eee;
+    font-size: 15px;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#display {
+    font-weight: 600;
+    font-size: 25px;
+
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+
+    width: 210px;
+    color: var(--numberBtn-text-color);
+
+    background-color: var(--display-color);
+    padding: 10px;
+    text-align: right;
+
+    box-shadow: 0 2px 3px 1px #00000050;
+}
+
+#display::placeholder {
+    color: var(--numberBtn-text-color);
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+
+    border: none;
+    border-radius: 50%;
+
+    box-shadow: 0 3px 3px 1px #00000030;
+
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.numberBtn,
+#periodBtn,
+#signBtn {
+    background-color: var(--numberBtn-color);
+    color: var(--numberBtn-text-color);
+}
+
+.numberBtn:hover,
+#periodBtn:hover,
+#signBtn:hover {
+    background-color: var(--numberBtn-hover-color);
+}
+
+.numberBtn:active,
+#periodBtn:active,
+#signBtn:active {
+    background-color: var(--numberBtn-active-color);
+}
+
+.operationBtn {
+    background-color: var(--operationBtn-color);
+    color: var(--operationBtn-text-color);
+}
+
+.operationBtn:hover {
+    background-color: var(--operationBtn-hover-color);
+}
+
+.operationBtn:active {
+    background-color: var(--operationBtn-active-color);
+}
+
+#equalsBtn {
+    background-color: var(--equalsBtn-color);
+    color: var(--equalsBtn-text-color);
+}
+
+#equalsBtn:hover {
+    background-color: var(--equalsBtn-hover-color);
+}
+
+#equalsBtn:active {
+    background-color: var(--equalsBtn-active-color);
+}
+
+ion-icon {
+    font-size: 22px;
+}
+
+#subtractText {
+    font-size: 15px;
+    --ionicon-stroke-width: 55px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <script src="index.js" defer></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+
+        <h1>Calculator</h1>
+
+        <section id="calculator">
+            <div id="preview"></div>
+            <input id="display" placeholder="0" disabled>
+
+            <div id="buttons">
+                <button class="operationBtn" onclick="clearEntry()">CE</button>
+                <button class="operationBtn" onclick="clearAll()">C</button>
+                <button class="operationBtn" onclick="backspace()"><ion-icon name="backspace"></ion-icon></button>
+                <button class="operationBtn" onclick="performOperation('divide')">÷</button>
+                <button class="numberBtn">7</button>
+                <button class="numberBtn">8</button>
+                <button class="numberBtn">9</button>
+                <button class="operationBtn" onclick="performOperation('multiply')">×</button>
+                <button class="numberBtn">4</button>
+                <button class="numberBtn">5</button>
+                <button class="numberBtn">6</button>
+                <button class="operationBtn" onclick="performOperation('subtract')"><ion-icon id="subtractText" name="remove-sharp"></ion-icon></button>
+                <button class="numberBtn">1</button>
+                <button class="numberBtn">2</button>
+                <button class="numberBtn">3</button>
+                <button class="operationBtn" onclick="performOperation('add')">+</button>
+                <button id="signBtn" onclick="flipSign()"><ion-icon name="repeat-sharp"></ion-icon></button>
+                <button class="numberBtn">0</button>
+                <button id="periodBtn" onclick="appendPeriod()">.</button>
+                <button id="equalsBtn" onclick="calculate()">=</button>
+            </div>
+        </section>
+    </body>
+
+</html>
